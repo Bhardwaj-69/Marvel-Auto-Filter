@@ -61,7 +61,7 @@ async def tts(client, message):
         await message.reply_voice("tts.mp3")
         os.remove("tts.mp3")
     except Exception as e:
-        await m.edit('<b>sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ ! ᴘʟᴇᴀsᴇ ᴜsᴇ ᴅɪғғᴇʀᴇɴᴛ ᴛᴇxᴛs\nᴏʀ ʀᴇᴘᴏʀᴛ ɪɴ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ: @bisal_files_talk</b>')
+        await m.edit('<b>sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ ! ᴘʟᴇᴀsᴇ ᴜsᴇ ᴅɪғғᴇʀᴇɴᴛ ᴛᴇxᴛs\nᴏʀ ʀᴇᴘᴏʀᴛ ɪɴ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ: @MovieWalaChat</b>')
         print('err in tts',e)
         try:
             os.remove("tts.mp3")
@@ -139,16 +139,16 @@ async def start(client:Client, message):
                 newPoint = await db.get_point(refUserId)
                 if AUTH_CHANNEL and await is_req_subscribed(client, message):
                         buttons = [[
-                            InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
+                            InlineKeyboardButton('⇆ ♻ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs♻ ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
                             ],[
                             InlineKeyboardButton('⚙ ꜰᴇᴀᴛᴜʀᴇs', callback_data='features'),
-                            InlineKeyboardButton('🎗️ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='premium'),
+                            InlineKeyboardButton('🎗️ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ👑', callback_data='premium'),
                             ],
                             [
-                            InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғʀᴇᴇ 🎁', callback_data=f'free_premium#{message.from_user.id}')
+                            InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ👑 ғʀᴇᴇ♻ 🎁', callback_data=f'free_premium#{message.from_user.id}')
                             ],
                             [
-                            InlineKeyboardButton('🎭 ʏᴏᴜʀ ᴘᴏɪɴᴛs ✨', callback_data=f'point#{message.from_user.id}'),
+                            InlineKeyboardButton('🎃 ʏᴏᴜʀ ᴘᴏɪɴᴛs ✨', callback_data=f'point#{message.from_user.id}'),
                             InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🚩', callback_data='about')
                             ],
                             [
@@ -233,7 +233,7 @@ async def start(client:Client, message):
             InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғʀᴇᴇ 🎁', callback_data=f'free_premium#{message.from_user.id}')
         ],
         [
-            InlineKeyboardButton('🎭 ʏᴏᴜʀ ᴘᴏɪɴᴛs ✨', callback_data=f'point#{message.from_user.id}'),
+            InlineKeyboardButton('🎃 ʏᴏᴜʀ ᴘᴏɪɴᴛs ✨', callback_data=f'point#{message.from_user.id}'),
             InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🚩', callback_data='about')
         ],
         [
@@ -266,7 +266,7 @@ async def start(client:Client, message):
             temp.CHAT[user_id] = grp_id
             verify = await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=notcopy_{user_id}_{verify_id}_{file_id}", grp_id, is_second_shortener, is_third_shortener , pm_mode=pm_mode)
             buttons = [[
-                InlineKeyboardButton(text="♻️ ᴠᴇʀɪғʏ 🎭", url=verify)
+                InlineKeyboardButton(text="♻️ ᴠᴇʀɪғʏ 🏝", url=verify)
             ],[
                 InlineKeyboardButton(text="ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❓", url=settings['tutorial']),
             ]]
@@ -706,7 +706,7 @@ async def set_shortner_2(c, m):
     except Exception as e:
         await save_group_settings(grp_id, 'shortner_two', SHORTENER_WEBSITE2)
         await save_group_settings(grp_id, 'api_two', SHORTENER_API2)
-        await m.reply_text(f"<b><u>💢 ᴇʀʀᴏʀ ᴏᴄᴄᴏᴜʀᴇᴅ!!</u>\n\nᴀᴜᴛᴏ ᴀᴅᴅᴇᴅ ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇꜰᴜʟᴛ sʜᴏʀᴛɴᴇʀ\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇɴ ᴜsᴇ ᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ ᴏʀ ᴀᴅᴅ ᴠᴀʟɪᴅ sʜᴏʀᴛʟɪɴᴋ ᴅᴏᴍᴀɪɴ ɴᴀᴍᴇ & ᴀᴘɪ\n\nʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴄᴏɴᴛᴀᴄᴛ ᴏᴜʀ <a href=https://t.me/bisal_files>sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ</a> ꜰᴏʀ sᴏʟᴠᴇ ᴛʜɪs ɪssᴜᴇ...\n\nʟɪᴋᴇ -\n\n`/set_shortner_2 mdiskshortner.link e7beb3c8f756dfa15d0bec495abc65f58c0dfa95`\n\n💔 ᴇʀʀᴏʀ - <code>{e}</code></b>", quote=True)
+        await m.reply_text(f"<b><u>💢 ᴇʀʀᴏʀ ᴏᴄᴄᴏᴜʀᴇᴅ!!</u>\n\nᴀᴜᴛᴏ ᴀᴅᴅᴇᴅ ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇꜰᴜʟᴛ sʜᴏʀᴛɴᴇʀ\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇɴ ᴜsᴇ ᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ ᴏʀ ᴀᴅᴅ ᴠᴀʟɪᴅ sʜᴏʀᴛʟɪɴᴋ ᴅᴏᴍᴀɪɴ ɴᴀᴍᴇ & ᴀᴘɪ\n\nʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴄᴏɴᴛᴀᴄᴛ ᴏᴜʀ <a href=https://t.me/LarvaLinks>sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ</a> ꜰᴏʀ sᴏʟᴠᴇ ᴛʜɪs ɪssᴜᴇ...\n\nʟɪᴋᴇ -\n\n`/set_shortner_2 mdiskshortner.link e7beb3c8f756dfa15d0bec495abc65f58c0dfa95`\n\n💔 ᴇʀʀᴏʀ - <code>{e}</code></b>", quote=True)
 
 @Client.on_message(filters.command('set_log_channel'))
 async def set_log(client, message):
@@ -826,7 +826,7 @@ async def set_shortner_3(c, m):
     except Exception as e:
         await save_group_settings(grp_id, 'shortner_three', SHORTENER_WEBSITE3)
         await save_group_settings(grp_id, 'api_three', SHORTENER_API3)
-        await m.reply_text(f"<b><u>💢 ᴇʀʀᴏʀ ᴏᴄᴄᴏᴜʀᴇᴅ!!</u>\n\nᴀᴜᴛᴏ ᴀᴅᴅᴇᴅ ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇꜰᴜʟᴛ sʜᴏʀᴛɴᴇʀ\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇɴ ᴜsᴇ ᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ ᴏʀ ᴀᴅᴅ ᴠᴀʟɪᴅ sʜᴏʀᴛʟɪɴᴋ ᴅᴏᴍᴀɪɴ ɴᴀᴍᴇ & ᴀᴘɪ\n\nʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴄᴏɴᴛᴀᴄᴛ ᴏᴜʀ <a href=https://t.me/bisal_files>sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ</a> ꜰᴏʀ sᴏʟᴠᴇ ᴛʜɪs ɪssᴜᴇ...\n\nʟɪᴋᴇ -\n\n`/set_shortner_3 mdiskshortner.link e7beb3c8f756dfa15d0bec495abc65f58c0dfa95`\n\n💔 ᴇʀʀᴏʀ - <code>{e}</code></b>", quote=True)
+        await m.reply_text(f"<b><u>💢 ᴇʀʀᴏʀ ᴏᴄᴄᴏᴜʀᴇᴅ!!</u>\n\nᴀᴜᴛᴏ ᴀᴅᴅᴇᴅ ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇꜰᴜʟᴛ sʜᴏʀᴛɴᴇʀ\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇɴ ᴜsᴇ ᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ ᴏʀ ᴀᴅᴅ ᴠᴀʟɪᴅ sʜᴏʀᴛʟɪɴᴋ ᴅᴏᴍᴀɪɴ ɴᴀᴍᴇ & ᴀᴘɪ\n\nʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴄᴏɴᴛᴀᴄᴛ ᴏᴜʀ <a href=https://t.me/LarvaLinks>sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ</a> ꜰᴏʀ sᴏʟᴠᴇ ᴛʜɪs ɪssᴜᴇ...\n\nʟɪᴋᴇ -\n\n`/set_shortner_3 mdiskshortner.link e7beb3c8f756dfa15d0bec495abc65f58c0dfa95`\n\n💔 ᴇʀʀᴏʀ - <code>{e}</code></b>", quote=True)
 
 @Client.on_message(filters.command('set_time_2'))
 async def set_time_2(client, message):
